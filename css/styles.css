@@ -1,0 +1,270 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    background: whitesmoke;
+}
+nav img{
+    position: absolute;
+    top: 17px;
+    left: 12%;
+}
+nav ul{
+    margin-right: 25px;
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+nav ul li a{
+    position: relative;
+    color: red;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: red;
+    transform: scaleX(0);
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+}
+label #btn,
+label #cancel{
+    color: black;
+    font-size: 30px;
+    float: left;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width: 944px){
+    nav img{
+        left: 6%;
+        top: 20px;
+        width: 150px;
+    }    
+nav ul li a{
+    font-size: 17px;
+}
+.headings{
+    font-size: 2em;
+}
+#pic{
+    flex-direction: column;
+    align-items: center;
+}
+#pic img{
+    width: 100px;
+    height: 300px;
+}
+.intro h2{
+    text-align: center;
+    padding: 10px;
+}
+.input{
+    width: 70%;
+}
+#msg{
+    width: 30%;
+}
+@media(max-width: 450px){
+    label #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: whitesmoke;
+        top: 80px;
+        left: -100%;
+        text-align: left;
+        transition: All .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 20px;
+    }
+nav ul li a{
+    font-size: 20px;
+    }
+    #check:checked ~ul{
+        left: 0;
+    }
+    #check:checked ~label #btn{
+        display: none;
+    }
+    #check:checked ~label #cancel{
+        display: block;
+    }
+    .headings{
+        font-size: 1.7em;
+    }
+    #pic img{
+        width: 300px;
+        height: 175px;
+    }
+    #intro h2{
+        font-size: 1.5em;
+    }
+    .gallery img{
+        width: 275px;
+        height: 150px;
+        margin: 10px;
+    }
+    .input{
+        width: 100px;
+    }
+    #msg{
+        width: 90px;
+    }
+    #send{
+        width: 20%;
+    }
+}
+}
+.headings{
+    font-family: century;
+    font-size: 3em;
+    text-align: center;
+    margin: 40px 0px;
+}
+#intenship{
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    align-items: center;
+    padding: 20px;
+    float: none;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;/* it is used for multiple line creation purpose*/
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 20px;
+    float: none;
+}
+.gallery img{
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+    padding: 10px;
+}
+#services{
+    display: flex;
+    flex-direction: column;
+    background: skyblue;
+}
+.cols{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+#About{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: yellow;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 325px;
+    height: 250px;
+    border: 1px solid red;
+    border-radius: 0 30px;
+    background-color: whitesmoke;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#Contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
+    color: red;
+    padding: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 40%;
+    border: none;
+    outline: none;
+
+}
+#msg{
+    width: 40%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 20%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: navy;
+}
+h5{
+    color: white;
+}
+#home{
+    width: 100%;
+    height: 5vh;
+    background-color: navy;
+    justify-content: center;
+    display: flex;
+}

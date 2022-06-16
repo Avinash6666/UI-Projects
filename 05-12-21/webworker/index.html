@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>webworker</title>
+    </head>
+    <body>
+        <script>
+    if(window.Worker){
+        alert('hope');
+        let thread = new Worker("http://127.0.0.1:5500/Worker/reverses.js");
+            thread.postMessage("hello");
+    }else{
+        console.log("webworker not supported");
+    }
+        </script>
+    </body>
+</html>

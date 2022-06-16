@@ -1,0 +1,339 @@
+<!---
+<script>                //Data Tyypes
+    let obj = {
+        "key1" : "Hello",           //Data type is String then it can access "Hello"
+        123 : "Hi",                 //Data type is number then it is not access "error"
+    }
+    console.log(obj.key1);
+    console.log(obj.obj[123]);      //with the help of array we can access the number 
+</script>
+--->
+
+<!----
+<script>
+    let obj = {
+        1 : "h",
+        2 : "a",
+        3 : "y"
+    }
+    console.log(obj[1], obj[2], obj[3])                 //h a y
+</script>
+--->
+
+<!-----
+<script>
+    let obj = {}
+    let key = {}
+    let value1 = "Hi";
+    obj[key] =value1;
+
+    let key1 = {};
+    let value2 = "Hello";
+    obj[key1] = value2;                 //here overrie will happen so, old value override with the new value so, we will get latest value
+
+    console.log(obj);               //{[object Object]: 'Hello'}
+</script>
+---->
+<!---
+If it is String formate then we go for dot notation 
+If it is apart from string then we go for Square notation
+-->
+
+<!----
+<script>                    //Doublecate keys
+    let obj = {
+        "key" : "h",
+        "key" : "a"                //here override will happen and get lastest value
+    }
+    console.log(obj)                //{key: 'a'}
+</script>
+--->
+
+<!----
+<script>                    //Doublecate keys
+    let obj = {
+        "key" : "h",
+        "key1" : "a"                
+    }
+    console.log(obj)                //{key: 'h', key1: 'a'}
+</script>
+--->
+
+<!---
+<script>
+    let obj = {
+        "key1" : "h",
+        "key2" : "a",
+        "key3" : "y"
+    }
+
+
+    console.log(obj.key1,obj.key2,obj.key3);                //h a y
+    console.log(obj["key1"],obj['key2'],obj["key3"]);           //h a y
+
+    //De structuring 
+    const {key1,key2,key3} = obj;
+    console.log(key1,key2,key3);                        //h a y
+
+    for(let key in obj){
+        console.log(obj[key]);
+    }
+</script>
+--->
+
+<!---
+<script>
+    let myfun = {
+        "money" : {"amount" : 1000},
+        "pen" : {"company" : "reynold"},
+        "book" : {"Company1" : "react"},
+        "gold" : {"weight" : "1gm"}
+    }  
+    //Destacturing
+    let {money,gold,book,pen} = myfun;
+    let {amount} = money;
+    let {company} = pen;
+    let {Company1} = book;
+    let {weight} = gold;
+
+    console.log(amount,company,Company1,weight)         //1000 'reynold' 'react' '1gm'
+</script>
+--->
+
+<!---
+<script>
+    let arr = [
+        {"e_id":1,"e_n":"1","e_sal":1000},
+        {"e_id":2,"e_n":"2","e_sal":2000},
+        {"e_id":3,"e_n":"3","e_sal":3000},
+        {"e_id":4,"e_n":"4","e_sal":4000}
+    ]
+//We can pass data to Script enverament to html enveranment then we use document.write()
+    document.write(`
+        <table border="1"
+               cellpadding="10px"
+               cellspacing="10px"
+               align="center">
+            <tr>
+                <th>E_ID</th>
+                <th>E_N</th>
+                <th>E_Sal</th>
+            </tr>
+    `s);
+    arr.forEach((rec) => {
+        document.write(`
+        <tr>
+            <td>${rec.e_id}</td>   
+            <td>${rec.e_n}</td>   
+            <td>${rec.e_sal}</td>    
+        </tr>
+        `);
+    });
+    document.write(`</table>`);
+</script>
+-->
+<!----
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    let products = [
+        {Course: "Core","Cost" : 100,Image:"images/img.png"},
+        {Course: "Core","Cost" : 200,Image:"images/img.jpg"},
+        {Course: "Core","Cost" : 300,Image:"images/img1.jpg"},
+        {Course: "Core","Cost" : 400,Image:"images/img2.jpg"},
+        {Course: "Core","Cost" : 500,Image:"images/img3.jpg"},
+        {Course: "Core","Cost" : 600,Image:"images/img4.jpg"}
+    ];
+        document.write(`
+        <table border="1"
+               cellpadding="10px"
+               cellspacing="10px"
+               align="center">
+                <tr>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Images</th>
+                    <th>Action</th>
+        `);
+        products.forEach((record)=>{
+            document.write(`
+                <tr>
+                    <td>${record.Name}</td>
+                    <td>${record.Cost}</td>
+                    <td><img width="20px"src=${record.Image}</td>
+                    <td><i class="fa fa-trash-o"> &nbsp &nbsp<i class="fa fa-edit"></td>      
+                </tr>
+            `)
+        })
+</script>
+--->
+
+<!-----
+    1)JSON.stringify() converting obj to String
+    2) JSON.parse() converting string to obj
+-->
+<!---
+<script>            //Data types
+    let obj = {"key1" : "hai"};
+    console.log(typeof(obj))                    //Object
+
+    let str = JSON.stringify(obj);           //converting obj to string then we have one function JSON.stringify()
+    console.log(typeof str)                 //String
+</script>
+-->
+
+<!----
+<script>
+    let obj = {'sub_one':'Angular Js'};
+    console.log(typeof obj);                        //object
+    
+    let str = JSON.stringify(obj);                      
+    console.log(typeof str)                     //String
+
+    let obj1 = JSON.parse(str);
+    console.log(typeof obj1)                //object
+</script>
+--->
+
+<!---
+hasOwnProperty():
+*******************
+It is accepting only boolean values like ture/false
+If the value is available it returns ture
+If the values not available it returns false 
+
+<script>       
+    let obj = {"k":"Hay","k1":"Hi","k2":"Hello"};
+   console.log( obj.hasOwnProperty("k") )                   //ture
+   console.log( obj.hasOwnProperty("key"))                  //false
+</script>
+-->
+
+<!---
+<script>
+    let obj = {
+        "key1" : "H",
+    }
+    //checking object is empty or not
+    Object.keys(obj).length === 0 ? console.log("Empty"):console.log("Not Empty");           //Not Empty
+    Object.values(obj).length === 0? console.log("Empty"):console.log("Not Empty");
+
+    for(let key in obj){
+        if(obj.hasOwnProperty(key)){
+            console.log("Not Empty");
+        }else{
+            console.log("Empty");                                   //Not Empty
+        }
+    }
+</script>
+--->
+
+<!---
+<script>
+    let obj = {
+    
+    }
+    //checking object is empty or not          
+    Object.keys(obj).length === 0 ? console.log("Empty"):console.log("Not Empty");           
+    Object.values(obj).length === 0? console.log("Empty"):console.log("Not Empty");         //Empty
+    
+</script>
+---> 
+<!----
+Entries();
+***********
+     It converts obj to arry
+
+
+<script>
+    let obj = {
+        "a":"b",
+        "c":"d",
+        "e":"f"
+    };
+   let arr = Object.entries(obj);
+   console.log(arr)                                 //(3) [Array(2), Array(2), Array(2)]
+</script>
+-->
+
+<!---
+<script>                        //old opproach is assign
+    let obj1 = {"key1":"Hay"};
+    let obj2 = {"key2":"Hi"};
+    let obj3 = {"key3":"Hello"};
+    console.log(Object.assign(obj1,obj2,obj3))          //{key1: 'Hay', key2: 'Hi', key3: 'Hello'} this concatenation
+</script>
+--->
+
+<!---
+<script>
+    let arr = [100,200,300,400,500];
+    console.log(
+        arr.filter((element)=>{
+            return element>=300;                            //(3) [300, 400, 500]
+        })
+    )
+</script>
+--->
+
+<!----
+<script>
+    let arr = [100,200,300,400,500];
+    console.log(
+        arr.filter((Element)=>{
+            return Element<=300;                //(3) [100, 200, 300]
+        })
+    )
+</script>
+--->
+
+<!---
+<script>
+    let arr = [100,200,300,400,500];
+    console.log(
+        arr.filter((Element)=>{
+            return Element<=300;                //(3) [{…}, {…}, {…}]
+        }).map((Element)=>{
+            return {"key":Element}                 //Above one is only object
+        })
+    )
+</script>
+--->
+<!---
+<script>
+    let arr = [100,200,300,400,500];
+    console.log(
+        arr.filter((Element)=>{
+            return Element == 100;                  //only 100 we will get
+        }).map((Element)=>{
+            return {"key1":Element};
+        })
+    );
+</script>
+--->
+
+<!---
+<script>
+    let arr = [{"price":100},
+               {"price":200},
+               {"price":300},
+               {"price":400},
+               {"price":500}]
+
+    console.log(
+        arr.filter((Element)=>{
+            return Element.price>=300;
+        })
+    )
+</script>
+--->
+
+<script>
+    let key1 = "hai";
+    let key2 = "H r u"
+
+    let obj = {
+        key1,
+        key2
+    }
+    console.log(obj);               //{key1: 'hai', key2: 'H r u'}
+</script>

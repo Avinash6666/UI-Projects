@@ -1,0 +1,183 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+nav{
+    height: 80px;
+    background: wheat;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+nav img{
+    padding: 5px 0 0 80px;
+    width: 150px;
+    height: auto;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+nav ul li button{
+    font-size: 20px;
+    color: blueviolet;
+    border: none;   
+    background: wheat;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover{
+    background: burlywood;
+}
+nav ul li{
+    background: wheat ;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    padding: 0 15px;
+    color: blueviolet;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    background: burlywood;
+}
+nav ul ul{
+    position: absolute;
+    top: 60px;
+    display: none;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul ul li{
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+#login-form{
+    display: none;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 2% auto;
+    //background: wheat;
+    background: linear-gradient(50deg, red,green);
+    padding: 10px;
+    overflow: hidden;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    //outline: none;
+    position: relative;
+}
+#btn{
+    //top: 0;
+    //left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: yellow;
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group-login{
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-group-register{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submet-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #f3c693;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 34px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 60px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#login input{
+    color: black;
+    font-size: 15;
+}
+#register{
+    left: 450px;
+}
+#register input{
+    color: black;
+    font-size: 15;
+}
+h5{
+    text-align: center;
+    border: 1px solid red;
+    background: yellowgreen; 
+    color: blue;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ section{
+     display: inline-block;
+     text-align: center;
+     padding: 10px;
+ }
+p{
+    text-align: justify;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Comic Sans MS;
+    color: royalblue;
+}
+

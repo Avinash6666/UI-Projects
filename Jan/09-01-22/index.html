@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Web Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <img src="img.png" alt="">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Contact">Contact us</a></li>
+                <li><a href="#">Registration</a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <div class="main">
+                <h1 class="headings">Welcome To Albenus</h1>
+            </div>
+        </section>
+
+
+        <section id="About">
+            <h2><i style="color: green;">About</i> <i style="color: red;">Us?</i></h2>
+            <div id="pic">
+                <img src="imgs.jpg" alt="">
+                <div id="intro">
+                    <h3><i>A</i><b>lbenus</b></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti? Atque minima asperiores libero ut in obcaecati, fugiat facere autem dolor repudiandae dolorem nulla aliquam voluptas, quo saepe eum dicta rem suscipit, vitae unde similique et illo. Obcaecati fugit officiis molestiae impedit minima ipsa inventore id debitis quasi voluptates perferendis beatae ullam non placeat asperiores earum iure amet, saepe ut cumque vel quam ex. Itaque nam aliquam unde tempora inventore fugiat illum voluptas consequuntur soluta dolorem quod, rerum similique molestias quibusdam ad dolor minima, reiciendis sint quis, delectus eos est. Debitis dolor magni ducimus, dolores quod doloremque quam saepe voluptatum quia voluptates corporis, est, commodi nihil aperiam repellat labore fugit. Soluta temporibus sapiente nesciunt vitae? Nihil, optio dolorem nesciunt ratione quia enim perferendis aperiam quo architecto vero nobis, laudantium consequatur ex quae aspernatur ut sed et nemo reiciendis voluptatem, velit rerum corporis? Officiis ad natus rem asperiores magnam ipsam officia autem non quia ex vero quas, laudantium ratione amet soluta praesentium saepe provident accusamus fugit nihil.</p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="Contact">
+            <h2><i style="color: cadetblue;">Contact Us</i></h2>
+            <form action="" class="form" name="reg_form" onsubmit="return validate()">
+                <input type="text" name="fname" class="input" placeholder="Enter Your Name">
+                <input type=" email" name="email" class="input" placeholder="Enter Your Email">
+                <input type="telnumber" name="mobile" class="input" placeholder="Enter Mobile Number">
+                <input type="textarea" id="address" size="50" name="address" placeholder="Enter Address">
+                <input type="file" onchange="return fileValidation()"  id="file" value="Choose file">
+                <!--<div id="date">
+                    <label class="startDate">Starting Date</label>
+                    <input type="date" placeholder="Starting date"  max="*">
+                    <label class="endDate">End Date</label>
+                    <input type="date" placeholder="Starting date"   max="*">
+                </div>-->
+                <input type="submit" value="Send Message" id="send">
+            </form>
+        </section>
+
+       <footer id="footer">
+           <h5>© 2021 Simple web page. All Rights Reserved.</h5>
+       </footer>
+        <div id="imagePreview"></div>
+        <script>
+            function fileValidation() {
+                var fileInput = 
+                    document.getElementById('file');
+                  
+                var filePath = fileInput.value;
+              
+                // Allowing file type
+                var allowedExtensions = 
+                        /(\.jpg|\.jpeg|\.png|\.gif|\.pdf)$/i;
+                  
+                if (!allowedExtensions.exec(filePath)) {
+                    alert('Invalid file type');
+                    fileInput.value = '';
+                    return false;
+                } 
+                else 
+                {
+                  
+                    // Image preview
+                    if (fileInput.files && fileInput.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            document.getElementById(
+                                'imagePreview').innerHTML = 
+                                '<img src="' + e.target.result
+                                + '"/>';
+                        };
+                          
+                        reader.readAsDataURL(fileInput.files[0]);
+                    }
+                }
+            }
+        </script>
+
+        <script>    
+            function validate() {    
+                var fname = document.reg_form.fname;          
+                var email = document.reg_form.email;    
+                var mobile = document.reg_form.mobile;
+                var address = document.reg_form.address;  
+      
+        
+                if (fname.value.length <= 0) {    
+                    alert('Please enter your name');   
+                    fname.focus();    
+                    return false;    
+                }               
+                if (email.value.length <= 0) {    
+                    alert("Email Id is required");    
+                    email.focus();    
+                    return false;    
+                }    
+                if (mobile.value.length <= 0) {    
+                    alert("Mobile number is required");    
+                    mobile.focus();    
+                    return false;    
+                } 
+                if (address.value.length <= 0) {    
+                    alert("Address is required");    
+                    address.focus();    
+                    return false;    
+                }      
+                if (file.value.length <= 0) {    
+                    alert("File is required");    
+                    address.focus();    
+                    return false;    
+                } 
+                if (startDate.value.length <= 0) {    
+                    alert("Starting Date is required");    
+                    address.focus();    
+                    return false;    
+                } 
+                if (endDate.value.length <= 0) {    
+                    alert("Ending Date is required");    
+                    address.focus();    
+                    return false;    
+                }      
+                return false;    
+            }    
+        </script>  
+        
+
+    </body>
+</html>

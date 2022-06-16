@@ -1,0 +1,70 @@
+<!----
+This is a keyword
+this is refers to the current object
+In a function, in strict mode, this is undefined.
+Methods like call(), and apply() can refer this to any object.
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invokable</title>
+    </head>
+    <body>
+        <p id="name"></p>
+        <script>
+            const obj = {
+                fname:"abc",
+                lname:"def",
+                fullName: function(){
+                    return this.fname+""+this.lname;        //return this; like this we write then we will get [object Object]
+                }                                           //Because Invoking a function as an object method, causes the value of this to be the object itself.
+            }
+            document.getElementById('name').innerHTML=obj.fullName();           //abcdef
+        </script>
+    </body>
+</html>
+
+<!----
+    Global object
+    *************
+    When a function is called without an owner object, the value of this becomes the global object
+    In a web browser the global object is the browser window.
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invokable</title>
+    </head>
+    <body>
+        <p id="abc"></p>
+        <script>
+            let x = myFun();
+            function myFun(){
+                return this;
+            }
+            document.getElementById("abc").innerHTML= x;        //[object Window]
+        </script>
+    </body>
+</html>
+-->
+
+<!----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invokable</title>
+    </head>
+    <body>
+        <p id="abc"></p>
+        <script>
+            function myFun(a,b){
+                return a*b;
+            }
+            document.getElementById("abc").innerHTML=myFun(5,4);
+        </script>
+    </body>
+</html>
+--->

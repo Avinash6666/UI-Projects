@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#hide").click(function () {
+                    $("h1").hide();
+                });
+                $("#show").click(function () {
+                    $("h1").show();
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>
+            <mark>
+                On clicking the "Hide_me" button, I will disappear.
+            </mark>
+        </h1>
+        <button id="hide">Hide_me</button>
+        <button id="show">Show_me</button>
+    </body>
+
+</html>
+
+
+
+
+
+<!---<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <p>A loop with a
+                <mark>continue</mark> statement.
+            </p>
+
+            <p>loop will skip the iteration where k = 7.</p>
+
+            <p id="maddy"></p>
+
+
+            <script>
+                var text = "";
+                var k;
+                for (k = 0; k < 10; k++) {
+                    if (k === 7) {
+                        continue;
+                    }
+                    text += "The number is " + k + "<br>";
+                }
+                document.getElementById("maddy").innerHTML = text;
+            </script>
+    </body>
+
+</html>
+-->

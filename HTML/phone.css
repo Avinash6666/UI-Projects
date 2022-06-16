@@ -1,0 +1,27 @@
+#home{
+    height: 820px;
+}
+.headings{
+    font-size: 1.7em;
+}
+#pic img{
+    width: 300px;
+    height: 175px;
+}
+#intro h2{
+    font-size: 1.5em;
+}
+.gallery img{
+    width: 275px;
+    height: 150px;
+    margin: 10px;
+}
+.input{
+    width: 80px;
+}
+#msg{
+    width: 70px;
+}
+#send{
+    width: 20%;
+}

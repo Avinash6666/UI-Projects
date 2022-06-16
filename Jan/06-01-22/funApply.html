@@ -1,0 +1,86 @@
+<!---
+Function Apply
+*************
+        The apply() method is similar to the call() method
+        The apply() method accepts arguments in an array 
+
+    Diff b/w call() & Apply():
+    **************************
+            The call() method takes arguments separately.
+            The apply() method takes arguments as an array.
+    
+--->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="a"></p>
+        <p id="b"></p>
+        <p id="c"></p>
+        <p id="d"></p>
+        <script>
+            document.getElementById("a").innerHTML = Math.max(1,2,3); 
+            document.getElementById("b").innerHTML = Math.max.apply(null, [109841,9802,45678903]); 
+            document.getElementById("c").innerHTML = Math.max.apply("", [6666,26,993]); 
+            document.getElementById("d").innerHTML = Math.max.apply(undefined, [109876,2423,312324]); 
+        </script>
+    </body>
+</html>
+
+<!-----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Apply</title>
+    </head>
+    <body>
+        <p id="apply"></p>
+        <script>
+            const obj = {
+                fullName: function(city, country){
+                    return this.fname+""+this.lname+","+city+"/"+country;
+                }
+            }
+            const myfun = {
+                fname:"Jai",
+                lname: "Bheem"
+            }
+            const myobj = {
+                fname:"Albenus",
+                lname: "All"
+            }
+            document.getElementById('apply').innerHTML= obj.fullName.apply(myfun, ["Hyd", "Ind"]);
+        </script>
+    </body>
+</html>
+--->
+<!-----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Apply</title>
+    </head>
+    <body>
+        <p id="call"></p>
+        <script>
+            const myfun = {
+                fullName: function(){
+                    return this.fname+""+this.lname;
+                }
+            }
+            const obj = {
+                fname:"John",
+                lname: "Doe"
+            }
+            const myobj = {
+                fname:"Mary",
+                lname: "Doe"
+            }
+            document.getElementById('call').innerHTML= myfun.fullName.apply(myobj);//if you want to call obj then we need to replace obj in place of myobjin apply()
+        </script>
+    </body>
+</html>
+--->

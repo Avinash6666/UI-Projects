@@ -1,0 +1,31 @@
+Difference b/w XML & JSON
+***************************
+    Both JSON and XML can be used to receive data from a web server.
+    XML has to be parsed with an XML parser. 
+    JSON can be parsed by a standard JavaScript function.
+
+JSON is Like XML Because:
+*************************
+    Both JSON and XML are "self describing" (human readable)
+    Both JSON and XML are hierarchical (values within values)
+    Both JSON and XML can be parsed and used by lots of programming languages
+    Both JSON and XML can be fetched with an XMLHttpRequest
+
+
+JSON is Unlike XML Because:
+**************************
+    JSON doesn't use end tag
+    JSON is shorter
+    JSON is quicker to read and write
+    JSON can use arrays
+
+
+Valid Data Types:
+****************
+    In JSON, values must be one of the following data types:
+        a string                            : It must be in " Double or a Single quotes "
+        a number                            : It must be an " Integer or a Floating point "   
+        an object (JSON object)             : Values in JSON can be objects. It is indicated as {we place here key{we place obj here}}
+        an array                            : Values in JSON can be arrays. It is indicated as []
+        a boolean                           : In boolean we place values ture/false
+        null                                : In null the values is null

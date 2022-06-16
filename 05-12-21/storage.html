@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Storages API</title>
+        <style>
+            fieldset{
+                border: 1px solid red;
+                border-radius: 10px;
+                width: 25%;
+                margin: 50px auto;
+            }
+            legend{
+                background-color: yellow;
+                color: red;
+                padding: 5px;
+                border: 1px solid red;
+                border-radius: 5px;
+                text-align: center;
+            }
+            label{
+                display: block;
+                margin: 10px 0px;
+                font-family: Comic Sans MS;
+                background-color: yellow;
+                width: 25%;
+                text-align: center;
+            }
+            input{
+                width: 300px;
+                border-radius: 5px;
+                height: 25px;
+            }
+            article{
+                margin-bottom: 10px;
+            }
+            button{
+                display: block;
+                width: 300px;
+                margin-bottom: 10px;
+                background-color: yellow;
+                border: 1px solid red;
+                padding: 5px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+       <fieldset>
+           <legend>Storages API</legend>
+           <article>
+               <label>Email</label>
+               <input type="email" id="storageemail">
+           </article>
+
+           <article>
+                <label>Password</label>
+                <input type="password" id="storagepassword">
+            </article>
+
+            <article>
+                <button onclick="store()">Store</button>
+                <button onclick="read()">Read</button>
+                <button onclick="remove()">Delete</button>
+            </article>
+
+            <article>
+                <p id="result"></p>
+            </article>
+       </fieldset>
+    </body>
+    <script>
+        function store(){
+            //local stroage
+            let jsonobj = {
+                "email": document.getElementById("storageemail").value,
+                "password" : document.getElementById("storagepassword").value
+            };         
+            window.sessionStorage.setItem("login_details",JSON.stringify(jsonobj));    
+        } 
+
+        function read(){
+            let str = window.sessionStorage.getItem("login_details");
+            let obj1 = JSON.parse(str);
+            document.getElementById("result").innerHTML = obj1.email+"...."+obj1.password;
+        }
+
+        function remove(){
+            window.sessionStorage.removeItem("login_details");
+            document.getElementById("result").innerHTML = "";
+        }
+
+    </script>
+</html>

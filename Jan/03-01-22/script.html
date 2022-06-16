@@ -1,0 +1,35 @@
+<!---
+    We can place the script tag in both placesess like head or body section
+    In below ex we placed script tag in body section
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Script Tag</title>
+    </head>
+    <body>
+
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = "My First JavaScript";
+        </script>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Script Tag</title>
+        <script>
+            function myFunction(){
+            onclick=document.getElementById('myid').innerHTML='Welcome to JavaScript....!';
+            }
+        </script>
+    </head>
+    <body>
+        <p id="myid">Hello.....!</p>
+        <button type="button" onclick="myFunction ()">Click Me</button>
+    </body>
+</html>
+
+

@@ -1,0 +1,50 @@
+JavaScript and Java are completely different languages, both in concept and design.
+
+JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+
+ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+
+In HTML, JavaScript code is inserted between <script> and </script> tags.
+
+You can place any number of scripts in an HTML document.
+
+Scripts can be placed in the <body>, or in the <head> section of an HTML page, or in both.
+
+JavaScript Values:
+*******************
+The JavaScript syntax defines two types of values:
+
+Fixed values
+Variable values
+Fixed values are called Literals.
+Variable values are called Variables.
+
+JavaScript Literals:
+*******************
+The two most important syntax rules for fixed values are:
+
+1. Numbers are written with or without decimals
+2. Strings are text, written within double or single quotes
+
+JavaScript Variables:
+*********************
+In a programming language, variables are used to store data values.
+JavaScript uses the keywords var, let and const to declare variables.
+An equal sign is used to assign values to variables.
+In this example, x is defined as a variable. Then, x is assigned (given) the value 6.
+
+JavaScript Operators:
+********************
+JavaScript uses arithmetic operators ( + - * / ) to compute values
+JavaScript uses an assignment operator ( = ) to assign values to variables
+
+JavaScript Expressions:
+**********************
+An expression is a combination of values, variables, and operators, which computes to a value.
+The computation is called an evaluation.
+For example, 5 * 10 evaluates to 50.
+Expressions can also contain variable values (ex: x=5;)
+    ex: document.getElementById().innerHtml = x*10;
+
+The values can be of various types, such as numbers and strings.
+    For example, "John" + " " + "Doe", evaluates to "John Doe"   

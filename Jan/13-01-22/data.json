@@ -1,0 +1,9 @@
+{
+    "products" : [
+        {"id":1,"name":"p1","cost":10000},
+        {"id":4,"name":"p4","cost":40000},
+        {"id":2,"name":"p2","cost":20000},
+        {"id":5,"name":"p5","cost":50000},
+        {"id":3,"name":"p3","cost":30000}
+    ]
+}

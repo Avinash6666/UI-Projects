@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            article{
+                width: 205px;
+                height: 205px;
+                border: 1px solid salmon;
+                text-align: center;
+                margin: 100px;
+                margin-bottom: -50px;
+                padding-right: 100px;
+            } 
+            img{
+                width: 100px;
+                height: 100px;
+                padding-top: 50px;
+                padding-left: 100px;
+            }  
+        </style>
+        <script>
+            function drag(event){
+                event.dataTransfer.setData("key1",event.target.id);
+            }
+            function drop(event){
+                event.preventDefault();
+                let id = event.dataTransfer.getData("key1");
+                event.target.appendChild( document.getElementById(id) );
+            }
+            function allowDrop(event){
+                event.preventDefault();
+            }
+        </script>
+    </head>
+    <body>
+        <article id="my_article" ondrop="drop(event)" ondragover="allowDrop(event)"></article>
+        <br><br>
+        <img id="my_logo" src="img.png" draggable="true" ondragstart="drag(event)">
+    </body>
+</html>

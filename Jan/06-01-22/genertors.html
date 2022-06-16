@@ -1,0 +1,100 @@
+<!-----
+<script>
+    function class_one(){
+
+    }
+
+    class_one.prototype.dbFun = function(){
+        return "data from oracle soon.....";
+    }
+
+    function class_two(){
+
+    }
+    class_two.prototype = Object.create(class_two.prototype);
+    class_two.prototype.dbFun = function(){
+        return "data from MongDB soon.....!";
+    }
+
+    let obj = new class_two();
+    console.log( obj.dbFun());          //data from MongDB soon.....!
+
+    let obj1 = new class_one();
+    console.log( obj1.dbFun());            //data from oracle soon.....
+
+    let obj2 = new class_two();
+    console.log( obj2.dbFun(), obj2.dbFun());           //data from MongDB soon.....! data from MongDB soon.....
+
+</script>
+--->
+
+
+<!---
+    Generators:
+    ***********
+        Generators controls the statements in function
+        Generators should have "*" symbol
+        Each statement should have the "yield" statement
+        Generators should return "cursor" mechanism
+        by using cursor only we can control the statement
+        if we will get ture cursor will reached end of the statement 
+    
+--->
+<!---
+<script>
+    function *fun_one(){ //if we add '*' for className then we will call generators
+        yield "Stmt-1";
+        yield "Stmt-2";
+        yield "Stmt-3";
+        yield "Stmt-4";
+        yield "Stmt-5";
+    }
+
+    let cursor = fun_one();
+    console.log( cursor.next() );           //with the help of .next() cursor will move next function
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+<!----
+<script>
+    function *fun_one(){
+        yield 100;
+        yield 200;
+        return 300;
+        yield 400;              // If any code available after return statement that would be never executed
+    }
+     
+     let cursor = fun_one();
+     console.log( cursor.next() );
+     console.log( cursor.next() );
+     console.log( cursor.next() );
+     console.log( cursor.next() );
+</script>
+--->
+
+
+<script>
+    function *fun_one(){
+        yield 100;
+        yield *fun_two();
+        yield *fun_three();
+        yield 666;
+    }
+
+    function *fun_two(){
+        yield 300;
+    }
+
+    function *fun_three(){
+        yield 600;
+    }
+
+    let cursor = fun_one();
+    for(let i=0;i<5;i++){
+        console.log( cursor.next() );
+    }
+</script>

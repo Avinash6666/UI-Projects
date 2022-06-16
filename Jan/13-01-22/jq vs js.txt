@@ -1,0 +1,19 @@
+JavaScript:
+************
+It is a scripting programing language.
+It is used to make websites more responsive and interactive.
+It is one of the pivoted parts alongside HTML and CSS which are used to create web pages.
+If HTML & CSS decorates and designed the web-pages so, Javascript makes the web pages dynamic.
+It is a major client-side language.
+It is used in not only web sites and also used for many other Domanis
+JavaScript uses JIT[Just in Time Compiler] which is a combination of interpreter and Compile
+
+JQuery:
+*******
+JQuery is a framework for javaScript which developed from JavaScript.
+It was created by Jhon Resig in jan 2006 at BarCamp NYC(New York City).
+It is a free & open-source library .
+It was designed to handle Bowsers Incompatibilities and to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax.
+“JQuery is a library to provide better client-side web page development” environment to the developer with the help of its feature-rich library.
+While JQuery Uses the resources that are provided by JavaScript to make things easier. It is a lightweight JavaScript library. It has only the DOM.
+  

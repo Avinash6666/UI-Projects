@@ -1,0 +1,124 @@
+<!--
+    <script>
+    function fun_one(){
+        return "Welcome to JavaScript";
+    }
+    console.log( fun_one() );
+</script>
+-->
+<!--- If we miss the paranthasis the whole definition will be print--> 
+<!--- 
+<script>
+    function fun_one(){
+        return "Hello";
+    }
+    console.log( fun_one );
+</script>
+-->
+
+<!---       
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1,arg2,arg3);
+    }
+    fun_one("React Js", "JavaScript", "HTML&CSS");  //React Js JavaScript HTML&CSS
+    fun_one("Angular Js", "React Js", "Node Js");   //Angular Js React Js Node Js
+    fun_one("Vue Js", "MongDB");                    //Vue Js MongDB undefined (Because in 3rd arg we can't assign any work so, we will get undefine )
+    fun_one();                                      //undefined undefined undefined (Beacuse here we can't any value to tis function so we will get undefine )
+</script>
+-->
+
+<!---
+<script>
+    function fun_one(){
+        return fun_two;
+    }
+    function fun_two(){
+        return "Hello";
+    }
+    console.log( fun_one); //here we will get fun_one() definition
+    console.log(fun_one()); //here we will get fun_two() definition
+    console.log(fun_one()()); // By placing one more ()paranthasis then we will get out put
+</script>
+-->
+<!---
+<script>
+    let arr = [];
+
+    function fun_one(){
+        return "Welcome to JavaScript";
+    }
+
+    for(let i=0;i<5;i++){
+        arr.push( fun_one() );
+    }
+    for(let j=0;j<arr.length;j++){
+    console.log(arr[j]);            //5Welcome to JavaScript
+    }
+</script>
+-->
+<!---
+<script>
+    function fun_one(){
+        return "Hello";
+    }                              //With the help of setTimeout function we display the value after 5sec Or more
+    setTimeout(function(){          //setTimeout contain two arguments first one is nameless() & Second one is Time
+        console.log( fun_one() );
+    },5000);                           //After 5sec output will be Hello
+</script>
+-->
+
+<!---
+<script>
+    function fun_one(){
+        return "Welcome";
+    }
+
+    setInterval(function(){             //With help of setInterval we can dispaly the value no of times
+        console.log(fun_one());
+    },2000);                            // output : undefine
+</script>
+-->
+
+<!---
+<!DOCKTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            setInterval(myTimer,1000);
+            
+            function myTimer() {
+            const date = new Date();
+            document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+            }
+        </script>
+    </body>
+</html>
+-->
+
+
+<!DOCKTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <button type="button" onclick="myStopFun()">Stop</button>
+        <script>
+            function fun_one(){
+                return "Hello";
+            }
+            const myIntervel = setInterval(function(){
+                console.log( fun_one() );
+            },2000);
+            function myStopFun(){
+                clearInterval(myIntervel)
+            }
+        </script>
+    </body>
+</html>
+

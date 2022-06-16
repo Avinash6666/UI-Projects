@@ -1,0 +1,214 @@
+<!---
+Call():
+********
+Calling one fun with the help of another fun is called callback function. 
+The call() method is a predefined JavaScript method.
+It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+-->
+<!----
+<script>
+    function fun1(arg){
+        console.log(arg);           //function2 Def
+        console.log(arg());     //welcome to callbacks
+    }
+    function fun2(){
+        return "welcome to callbacks";
+    }
+    fun1(fun2);
+</script>
+-->
+<!---
+<script>
+    function fun1(arg1,arg2,arg3){
+        console.log(arg1(),arg2(),arg3());          //Hi Hello Welcome
+    }
+    fun1(function fun2(){
+        return "Hi";
+    },
+    function fun3(){
+        return "Hello";
+    },
+    function fun4(){
+        return "Welcome";
+    });
+</script>
+--->
+
+<!------
+<script>
+    function fun1(arg1){
+        return arg1("Hello");
+    }
+    fun1(function fun2(arg1){
+        console.log(arg1);
+    });
+</script>
+--->
+<!-----
+<script>
+    function fun1(arg1,arg2,arg3){
+        return arg1("Hello")+""+arg2("Hi")+""+arg3("Welcome");
+    }
+    fun1(function fun2(arg1){
+        console.log(arg1);          //Hello
+    }, function fun3(arg1){
+        console.log(arg1);          //Hi
+    },function fun4(arg1){
+        console.log(arg1);             //Welcome
+    });
+</script>
+--->
+<!---
+<script>
+    function fun1(arg1,arg2,arg3){
+        console.log(arg1(), arg2(), arg3());        //Hi Hello MAy i come in....!
+    }
+    function fun2(){
+        return "Hi";
+    }
+    function fun3(){
+        return "Hello";
+    }
+    function fun4(){    
+        return "MAy i come in....!";
+    }
+    fun1( fun2, fun3, fun4 );
+</script>
+--->
+
+<!----
+<script>
+    function calc(num,add){
+        return add(num+5, false);
+    }
+    function addition(addRes,error){
+        if(error == false){
+            console.log(addRes);            //10
+        }
+    }
+   
+    calc(5,addition);
+</script>
+---->
+
+
+<script>
+    let calc = (num,add)=>{
+        return add(num+5,false);
+    }
+
+    let sub = (num,callback)=>{
+        return callback(num-3,false);
+    }
+
+    let mul = (num,mul)=>{
+        return mul(num*6,false);
+    }
+
+    let div = (num,div)=>{
+        return div((num/2)+6,false);
+    }
+    calc(5,(addRes,error)=>{
+        if(!error){
+            console.log(addRes);                                    //10
+            sub(addRes,(subRes,error)=>{
+                if(!error){
+                    console.log(subRes);                            //7
+                    mul(subRes,(mulRes,error)=>{
+                        if(!error){
+                            console.log(mulRes);                       //42
+                            div(mulRes,(divRes,error)=>{
+                                if(!error){
+                                    console.log(divRes);                //27
+                                }
+                            })
+                        }
+                    })
+                }
+            });
+        }
+    });
+</script>
+
+
+<!---
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Call</title>
+    </head>
+    <body>
+        <p id="call"></p>
+        <script>
+            const myfun = {
+                fullName: function(city, country){
+                    return this.fname+""+this.lname+","+city+"/"+country;
+                }
+            }
+            const obj = {
+                fname:"Jai",
+                lname: "Bheem"
+            }
+            const myobj = {
+                fname:"Albenus",
+                lname: "All"
+            }
+            document.getElementById('call').innerHTML= myfun.fullName.call(obj, "Hyd", "Ind");
+        </script>
+    </body>
+</html>
+--->
+
+<!----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Call</title>
+    </head>
+    <body>
+        <p id="call"></p>
+        <script>
+            const myfun = {
+                fullName: function(){
+                    return this.fname+""+this.lname;
+                }
+            }
+            const obj = {
+                fname:"John",
+                lname: "Doe"
+            }
+            const myobj = {
+                fname:"Mary",
+                lname: "Doe"
+            }
+            document.getElementById('call').innerHTML= myfun.fullName.call(myobj);//if you want to call obj then we need to replace obj in place of myobjin call()
+        </script>
+    </body>
+</html>
+---->
+
+
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Call</title>
+    </head>
+    <body>
+        <p id="call"></p>
+        <script>
+            const myfun = {
+                fullName: function(){
+                    return this.fname+""+this.lname;
+                }
+            }
+            const obj = {
+                fname:"Avi",
+                lname:"B",
+            }
+            document.getElementById('call').innerHTML= myfun.fullName.call(obj);
+        </script>
+    </body>
+</html>
+--->

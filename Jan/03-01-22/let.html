@@ -1,0 +1,36 @@
+<!------>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Let keyword</title>
+    </head>
+    <body>
+        <h1>JavaScript let</h1>
+        <p id="abc"></p>
+        <script>
+            let x=6;  //we can't declare same variable twice by using let keyword if we use then we will get below err
+           let x=4;  //SyntaxError: Identifier 'x' has already been declared
+            document.getElementById('abc').innerHTML=x;
+        </script>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Let keyword</title>
+    </head>
+    <body>
+        <h1>JavaScript let</h1>
+        <p id="abc"></p>
+        <script>
+            let x=6;// out is this x value only
+            {
+                //Variables declared inside a { } block cannot be accessed from outside the block
+                let x=4;// x can NOT be used here
+            }
+            document.getElementById('abc').innerHTML=x;
+        </script>
+    </body>
+</html>

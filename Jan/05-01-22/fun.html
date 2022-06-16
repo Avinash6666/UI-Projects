@@ -1,0 +1,292 @@
+<!----
+<script>
+    for(var i=0;i<5;i++){
+        setTimeout(function(){      
+            console.log(i);
+        },5000);             //output : 5 5 5 5 5
+    }
+</script>
+--->
+
+<!---
+<script>
+    for(let i=0;i<5;i++){
+        console.log(i);
+    }
+</script>   
+---->
+
+<!---
+<script>
+    for(let i=0;i<5;i++){
+        setTimeout(function(){      //0 1 2 3 4
+            console.log(i);
+        },5000);
+    }
+</script>
+--->
+
+<!-----
+    Rest parameters Function
+    *************************
+    It is used to store the more than one value in single argument
+    "..."" we can call spread operator
+    We can take only one spread operator for function
+    If you take more than one we will get syntax error
+    Position of spread operator always last in occurence
+    it is introduced in Es6 version
+
+    --->
+
+<!-----  
+<script>
+    function fun_one(...arg1){
+            console.log(arg1);
+    };
+    fun_one("Hello","Welcome","To","JavaScript");  //['Hello', 'Welcome', 'To', 'JavaScript']
+    fun_one();                                      //[] (if you not pass anything then we will get [])
+    fun_one(undefined);                             //[undefined]
+</script>
+---->
+<!---
+<script>
+    function fun_one(...arg1,...arg2){          // SyntaxError: Rest parameter must be last formal parameter
+
+    }
+</script>
+--->
+
+<!-----  
+<script>
+    function fun_one(arg2,...arg1){
+
+    }
+</script>
+--->
+
+<!---
+<script>
+    function fun_one(arg1,...arg2){
+        console.log( arg1,arg2 );
+    }
+    fun_one();                                           //we don't call anything then we will get undefined []
+    fun_one(undefined);                                  // undefined []
+    fun_one("Hello");                                    // Hello []
+    fun_one("Hello","Welcome");                          // Hello ['Welcome']
+    fun_one("Hello","Welcome","To","JavaScript");       // Hello (3) ['Welcome', 'To', 'JavaScript']
+</script>
+---->
+
+
+<!----
+    Default parameter in Function
+    ********************************
+        while defining the functions, we will assigin some default values to parameters.
+        this concept introduced in Es6
+-->
+<!---
+<script>
+    function fun_one(arg1="Hello",arg2="Welcome to",arg3="Albenus"){
+        console.log( arg1,arg2,arg3 );
+    }
+    fun_one();                                      //Hello Welcome to Albenus
+    fun_one("React Js");                            //React Js Welcome to Albenus  (changes will be happen when we replace value)
+    fun_one(undefined,undefined,undefined)          //Hello Welcome to Albenus  (Any changes will not happen when we use undefined)
+    fun_one(null,null,null);          //null null null  (changes will be happen when we use null)
+</script>
+---->
+
+<!----
+    Arrow Function:
+    ***************
+            Arrow functions behaves like callback functions
+            The function without name called as Anonymous function
+            we will represent Arrow functions with "=>"
+            Arrow function introduced in "Es6"
+
+            syntax:
+                    var/let/const variablename = (arg1,arg2,...arg n) =>{
+                        business logic
+                    }
+
+                    variblename(param1,param2,....param n);
+-->
+
+
+<!----
+<script>
+    let fun_one = ()=>{
+        return "hello";
+    }
+    console.log(fun_one()); //hello
+</script>
+--->
+<!---
+<script>
+    let fun_one = (arg1,arg2,arg3)=>{
+        console.log(arg1,arg2,arg3);
+    }
+    fun_one();                          //undefined,undefined,undefined
+    fun_one("Welcome","To","All");         //Welcome To All
+</script>
+--->
+<!---
+<script>
+    let initilize =(user,getElementByEmail,getElementById)=>{
+        console.log(user,getElementByEmail(),getElementById());         //Hello hr@albenus.com Albenus
+    }
+
+    let getElementByEmail = ()=>{
+        return "hr@albenus.com";
+    }
+
+    let getElementById = ()=>{
+        return "Albenus";
+    }
+
+    initilize("Hello",getElementByEmail,getElementById);
+</script>
+-->
+<!-----
+<script>
+    let arr = [];
+    for(let i=0;i<5;i++){
+        arr.push( ()=>{return "Hello"} );
+    }
+
+    for(let j=0;j<arr.length;j++){
+        console.log( arr[j]() );
+    }
+</script>
+-->
+
+<!----
+    IIFE
+    ****
+        it is introduced in Es6
+        these functions called as self invokable functions
+
+        syntax:
+                ((arg1,arg2....arg n)=>{
+                    business logic
+                })(param1,param2.....param n);
+-->
+<!---
+<script>
+    (()=>{
+        console.log("Welcome to IIFE");         //Welcome to IIFE
+    })();
+</script>
+-->
+<!---
+<script>
+    let i = (()=>{
+        return "Welcome to IIFE";
+    })();
+    console.log(i);         //fun.html:186 Welcome to IIFE
+</script>
+-->
+<!---
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log( arg1,arg2,arg3);
+    })("Hi","hru","Js")                     //Hi hru Js
+</script>
+-->
+
+<!---
+    Constructor function
+    ***********************
+    collection of variables called as class
+    eqavalent class concept is called constructors
+    To create the class like structures before Es6 we use constructors
+    in constructors function(variables and functions) should start with this keyword
+    This keyword representing the current class member
+    we will create the object with the help of new keyword
+-->
+
+
+<!----
+<script>
+    function class_one(){
+        this.sub_one = "React Js";
+        this.sub_two = "Angular Js";
+        this.sub_Three = "JavaScript";
+        this.sub_four = "Node Js";
+    }
+    let obj1 = new class_one();
+    console.log(
+        obj1.sub_one,
+        obj1.sub_two,                               //React Js Angular Js JavaScript Node Js
+        obj1.sub_Three,
+        obj1.sub_four
+    );
+</script>
+-->
+
+<!----
+<script>
+    function class_one(){
+        this.wish = "JavaScript";
+        this.my_fun = function(){
+            return `Welcome to ${this.wish}`;
+        }
+    }
+
+    let obj1 = new class_one();                 //creating obj to the function
+    console.log(obj1.my_fun());                 //Welcome to JavaScript
+</script>
+--->
+
+
+<script>
+    function class_one(arg1,arg2,arg3){
+        this.var_1 = arg1;
+        this.var_2 = arg2;
+        this.var_3 = arg3;
+    }
+
+    let obj1 = new class_one("hello","hi","hru");
+    console.log(obj1.var_1,obj1.var_2,obj1.var_3);
+
+    let obj2 = new class_one("hello","welcome","Albenus");
+    console.log(obj2.var_1,obj2.var_2,obj2.var_3);
+</script>
+
+
+<script>
+    function class_one(){}
+    class_one.prototype.var_1 = "Welcome";
+    let obj1 = new class_one();
+    console.log(obj1.var_1);
+</script>
+
+
+<script>
+    function class_one(){}
+    class_one.prototype.var_1 = function(){
+        return "Welcome";
+    }     
+    
+    function class_two(){}
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.var_2 = function(){
+        return "Welcome1";
+    } 
+    
+    function class_three(){}
+    class_three.prototype = Object.create(class_two.prototype);
+    class_three.prototype.var_3 = function(){
+        return "Welcome2";
+    } 
+
+
+    let obj1 = new class_one();
+    console.log( obj1.var_1());
+
+    let obj2 = new class_two();
+    console.log( obj2.var_1,obj2.var_2());
+
+    let obj3 = new class_three();
+    console.log( obj3.var_1(),obj3.var_2(),obj3.var_3());
+</script>

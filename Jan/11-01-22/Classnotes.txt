@@ -1,0 +1,68 @@
+JSON Stands for JavaScript Object Notation
+JSON also we can called as JavaScript Objects
+We can exchange the data in fullstack application in two ways
+    1) XML
+    XML is heavy weight
+
+    2) JSON
+    JSON is Light weight
+    JSON data is suggested while transferring the data
+    Syntax;
+    ******
+        we will represents the Objects with the help of currely brackes "{}"
+        we will represents the Arrays with the help of squary brackes "[]"
+        we will represents the Data with the help of " keys & values pairs "
+        key & value separated by using " : "
+        The file type for JSON files is ".json"
+        The MIME type for JSON text is "application/json"
+
+
+JSON is a text format for storing and transporting data
+JSON is "self-describing" and easy to understand
+JSON is language independent *
+
+The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
+
+JavaScript has a built in function for converting JSON strings into JavaScript objects:
+JSON.parse()
+
+JavaScript also has a built in function for converting an object into a JSON string
+JSON.stringify()
+
+
+JSON Values:
+***********
+In JSON, values must be one of the following data types:
+
+a string: In JSON, string values must be written with double quotes & single quotes
+a number
+an object
+an array
+a boolean
+null
+In JavaScript values can be all of the above, plus any other valid JavaScript expression, including:
+
+a function
+a date
+undefined
+
+Freeze Operator:
+***************
+    With the help of Freeze Operator we can lock the data
+    If we lock the data any changes will wont happen
+    With the help of Freeze Operator we can read the data
+    But we can't add, delete & update the data
+
+Seal Operator:
+*************
+        With the help of seal Operator we can read and update the data
+        Add & delete keywords are not work in seal Operator also
+
+Difference b/w Freeze & Seal:
+************************************************
+Freeze                                                          Seal
+
+-->read allow                                                    -->read allow
+-->write not allowed                                             -->write not allowed
+--> update not allow                                             --> update allow
+-->delete not allow                                              -->delete not allow

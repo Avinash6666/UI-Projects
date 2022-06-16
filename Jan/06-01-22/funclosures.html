@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Function Closures</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+
+        <script>
+            // Initiate counter
+            let counter = 0;
+
+            // Function to increment counter
+            // Function to decrement counter
+            // Function to division counter
+            function add() {
+                counter += 1;
+            }
+            function sub() {
+                counter -= 1;
+            }
+            function div() {
+                counter /= 10;
+            }
+            // Call add() 3 times
+            //call sub() 1time
+            //call div( 1time)
+            add();
+            add();
+            add();
+            sub();
+            div();
+
+            // The counter should now be 0.2
+            document.getElementById("demo").innerHTML = "The counter is: " + counter;
+        </script>
+
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Function Closures</title>
+    </head>
+    <body>
+        <button type="button" onclick="myFunction()">Count!</button>
+
+        <p id="demo">0</p>
+        <p id='qw'>0</p>
+        <p id="as">0</p>
+
+        <script>
+            const add = (function () {
+                let counter = 0;
+                return function () {counter += 1; 
+                    return counter;
+                }
+            })();
+
+            const sub = (function () {
+                let counter = 0;
+                return function () {counter -= 1;
+                    return counter;
+                }
+            })();
+
+            const div = (function () {
+                let counter = 1;
+                return function () {counter /= 2;
+                    return counter;
+                }
+            })
+
+            function myFunction(){
+                document.getElementById("demo").innerHTML = add();
+                document.getElementById("qw").innerHTML = sub();
+                document.getElementById('as').innerHTML = div();
+            }
+        </script>
+
+    </body>
+</html>

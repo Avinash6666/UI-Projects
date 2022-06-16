@@ -1,0 +1,42 @@
+functions are business logics
+functions are used to "reuse the business logics"
+we will define the functions with "function keyword"
+we have following types of functions
+ 1)Named Function
+  2)Anonymous functions 
+        It is also called as Arrow function
+        It is also called as Callback functions
+        It is also called as Fat Arrow  functions
+        It is also called as nameless functions
+3)Rest parameters in function
+4)Default parameters in function
+5)Optional parameters in function
+6)Generators
+7)IIFE (Immidiate Invokable Functional Expression)
+8)Constructor function
+ 
+ [] we can call brackets
+ () paranthess
+ {} currely bases
+
+ Named Function
+ *************
+ the function with name called as Named Function
+
+ Syntax:
+            Function Defination
+            Function Calling
+
+Function Defination
+*******************
+Syntax:
+      function functionname(arg1,arg2,arg3,.....arg n){
+            business logic
+      }
+
+Function Calling
+*******************
+Syntax:
+      functionname(param1,param2,param3,.....param n){
+            business logic
+      }

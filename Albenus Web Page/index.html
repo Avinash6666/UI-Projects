@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="http://use.fontaswome.com/releases/v5.6.3/css/all.css">
+    </head>
+    <body>
+            <div class="dropdwn">
+                <nav>
+                    <img src="img.png">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Intenship<i class="fad fa-sort-up"></i></a>
+                    <ul>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">UI</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Web Design<i class="fad fa-sort-up"></i></a>
+                <ul>
+                    <li><a href="#">Front End</a></li>
+                    <li><a href="#">Back end</a></li>
+                    <li><a href="#">others<i class="fad fa-sort-up"></i></a>
+                    <ul>
+                        <li><a href="#">Assignments</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Marks</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="https://albenusscm.com/hrportal/internship">About us</a></li>
+         <li><a href="tel:9491326527">Concant us</a></li>
+         <li><button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'" 
+            style="width:auto">Login</button></li>
+        </ul>
+    </nav>
+</div>
+<div id='login-form' class="login-page">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" onclick='login()' class="toggle-btn">Log In</button>
+            <button type="button" onclick="register()" class="toggle-btn">Register</button>
+        </div>
+        <form id="login" class="input-group-login">
+            <input type="text" class="input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+           <!--<input type="checkbox" class="check-box"><span>Remember Password</span>--->
+           <input type="checkbox" id="checkbox" name="checkbox" value="Remebere Password">
+            <label for="checkbox"> Remember Password</label><br>
+            <button type="submit" class="submit-btn">Log In</button>
+        </form>
+        <form id="register" class="input-group-register">
+            <input type="text" class="input-field" placeholder="First Name" required>
+            <input type="text" class="input-field" placeholder="Last Name" required>
+            <input type="text" class="input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <input type="password" class="input-field" placeholder="Conform Password" required>
+           <!--<input type="checkbox" class="check-box"><span>I Agree the trems & Conditions</span>--> 
+           <input type="checkbox" id="checkbox" name="checkbox" value="I Agree the trems & Conditions">
+           <label for="checkbox">I Agree the trems & Conditions</label><br>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</div>
+<script>
+var x=document.getElementById('login');
+var y=document.getElementById('register');
+var z=document.getElementById('btn');
+function register(){
+    x.style.left='-400px';
+    y.style.left='50px';
+    z.style.left='110px';
+}
+function login(){
+    x.style.left='50px';
+    y.style.left='450px';
+    z.style.left='0px';
+}
+</script>
+<script>
+var modal=document.getElementById('login-form');
+window.onclick=function(event){
+    if(event-EventTarget==modal){
+        modal.style.display="name";
+    }
+}
+</script>
+<section>
+        <img style="width: 250px;" src="images/img1.jpg">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia veritatis itaque fugit ratione sit quibusdam voluptatibus ut labore, praesentium, aut fugiat nam libero. Commodi aliquid, cupiditate blanditiis suscipit id sunt doloribus, aperiam iusto sit modi nobis, voluptate maiores expedita et rem hic officiis ipsa voluptatum. Quo inventore, tempora dolor commodi exercitationem delectus soluta consequuntur explicabo veniam ea. Amet, voluptas inventore.</p>
+        <img src="images/images.jpg">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias nobis facilis cumque nemo, quisquam est amet quos facere ut magni, repellendus iusto explicabo veritatis non rerum accusantium voluptates neque nihil sed, tempore velit animi ea quod. Aliquid quasi voluptatem quae repudiandae assumenda inventore, nobis error recusandae unde similique dolor dignissimos quas fugit! Architecto repellat, quibusdam repellendus tenetur voluptates alias ipsa hic harum, iusto nihil debitis aliquam esse autem quos earum amet animi voluptatem, maiores vitae. Qui minus aut quibusdam, soluta explicabo laboriosam! Repellendus, cumque? Commodi, voluptatem. Aliquid, animi voluptatibus laboriosam doloribus harum repellendus magnam iure tenetur temporibus ea! Quibusdam, obcaecati!</p>
+</section>
+    <h5>Copyright © 2020 Albenus All Rights Reserved</h5>
+    </body>
+</html>

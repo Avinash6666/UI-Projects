@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>webworker1</title>
+    </head>
+    <body>
+        <script>
+    if(window.Worker){
+       let thread1 = new Worker("revers.js");
+       thread1.postMessage("Welcome");
+       thread1.onmessage = function(e){
+           console.log(e.data);
+       }
+    }else{
+        console.log("webworker not supported");
+    }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+
+JSON Servers:
+************
+   -- A common use of JSON is to exchange data to/from a web server.
+   -- When receiving data from a web server, the data is always a string.
+   -- You can request JSON from the server by using an AJAX request
+   -- As long as the response from the server is written in JSON format, you can parse the string into a JavaScript object.
+   -- It is used to develop or creating the urls(rest api's)
+         Ex:
+        get,post,put,delete request...,
+    -- JSON Server by default running on port number "3000"
+    -- we will install JSOn Server by using following command
+            >npm install -g json-server
+    npm stands for node package manager
+    -g stands for golbal installation
+    we will loaded the data in JSON Server by using following command
+    >json-server --watch data.json
+    Test urls:
+    ***********
+    If you want to test the software we have one software
+    We will test rest api's with one software "poostman Tool"
+      http://localhost:3000/products
+
+    if you want get the data then use get request
+    if you want to add the data then use post request
+    if you want to updated the data then use put request
+    if you want to delete the data then use delete request
+    if you want to arrange the un-order data properly then we will use one code http://localhost:3000/products?_sort=id
+    if you want paticular data then we can call after url that paticular id http://localhost:3000/products/222
+    if want filter the that you can do  http://localhost:3000/products?_cost=30000&id=444
+    if you want  http://localhost:3000/products?_limit=3&_sort=cost&_order=des
+
+
+
+JSONP:
+**********
+    JSONP is a method for sending JSON data without worrying about cross-domain issues.
+    JSONP does not use the XMLHttpRequest object.
+    JSONP uses the <script> tag instead.
+    JSONP stands for JavaScript object Notation with Padding.

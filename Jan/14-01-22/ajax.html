@@ -1,0 +1,70 @@
+<!---
+syncronous calls are executing one by one.
+Asyncronous calls are executing at a time all.
+Asyncronous calls also called as "Axaj calls".
+syncronous as more aqurcy when compared to Asyncronous.
+If you want to make Asyncronous call we have one library that is JQurey
+$ This symobl represents the JQuarey
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!---<script>
+            $.ajax({
+                method:"GET",
+                url:"https://www.w3schools.com/angular/customers.php",
+                success:(posRes)=>{
+                    console.log(posRes);
+                },
+                error:(errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>-->
+
+        <!---<script>
+            $.ajax({
+                method:"POST",
+                url:'http://test-routes.herokuapp.com/test/uppercase',
+                data:{"message":"Welcome to javascript"},
+                success:(posRes)=>{
+                    console.log(posRes);
+                },
+                error:(errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>--->
+
+        <!---<script>
+            $.ajax({
+                method:"GET",
+                url:" http://localhost:3000/products",
+                success:(posRes)=>{
+                    console.log(posRes);
+                },
+                error:(errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>--->
+
+        <script>
+            $.ajax({
+                method:"POST",
+                url:" http://localhost:3000/products",
+                data:{"id":666,"p_name":"p6","p_cost":6000},
+                success:(posRes)=>{
+                    console.log(posRes);
+                },
+                error:(errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,286 @@
+<!---
+<script>
+    let obj = {
+        "sub1" : "React Js",
+        "sub2" : "Angular Js",
+        "sub3" : "Node Js"
+    };       //we can store json obj with the help of {}
+
+    console.log(obj.sub1,obj.sub2,obj.sub3)         //React Js Angular Js Node Js
+        
+</script>
+--->
+
+<!----
+<script>
+    let obj = {
+        "obj1" : {"key1" : "value1"} ,            //here key is obj1 & value is another json object {}
+        "obj2" : {"key2" : 'value2'} ,
+        "obj3" : {"key3" : 'value3'}
+    };
+
+    console.log(obj.obj1.key1);             //value1
+    console.log(obj.obj2.key2);             //value2
+    console.log(obj.obj3.key3);             //value3
+</script>
+-->
+<!---
+<script>
+    let obj = {
+        "key1" : "Hello",
+        "key2" : "Hi",
+        "key3" : "Welcome"
+    }                               
+    //If you want to iterate this loop we have one loop in ES6 that is for ....in loop
+
+    for(let key in obj){
+        console.log(key);                      //if you want objs
+        console.log( typeof(key));           // if you want know the data type then we will go typeof data
+        console.log(obj[key])               //if you want values
+    }
+</script>
+-->
+
+<!---
+<script>
+    let obj = {
+        "obj1" : {                                  //This is inner object creation
+            "sub1" : "JSON",
+            "sub2" : "React Js",
+            "sub3" : "Demo"
+        }
+    }
+
+    for(let key in obj.obj1){
+        console.log(obj.obj1[key]);                 //JSON  React Js  Demo
+    }
+</script>
+-->
+
+<!---
+<script>
+    function dbfun(){
+        return "Hello";
+    }
+
+    console.log( dbfun());          //function calling "Hello"
+</script>
+-->
+
+<!---
+<script>
+    let db = {
+        "Oracle" : Oracle,
+        "mySql" : mySql,
+        "MongDB" : MongDB,
+        "CassandraDB" : CassandraDB
+    }
+
+    function Oracle(){
+        return "Oracle connection is soon.....!";
+    }
+
+    function mySql(){
+        return "mysqul connection is soon...!";
+    }
+
+    function MongDB(){
+        return "MongDB connection is soon.....!";
+    }
+
+    function CassandraDB(){
+        return "CassndraDB connection is soon.....!";
+    }
+
+    console.log(db.Oracle(), db.mySql(), db.MongDB(), db.CassandraDB());
+</script>
+-->
+
+<!---
+<script>                    //Nameless function creation
+    let obj = {
+        "key1" : ()=>{return "Hi"},
+        "key2" : ()=>{return "Hello"},
+        "key3" : ()=>{return "Welcom"}
+    }
+    console.log(
+        obj.key1(),
+        obj.key2(),
+        obj.key3()
+    )
+</script>
+-->
+
+<!---
+<script>                    //Accessing only keys and values
+    let obj = {
+        "key1" : "value1",
+        "key2" : "value2",
+        "key3" : "value3"
+    }
+    console.log(
+        Object.keys(obj)                //"['key1', 'key2', 'key3']"   if you want only objs we have one pre-define function that "Object.keys()"
+    );
+    console.log(Object.values(obj))     //"['value1', 'value2', 'value3']" if you want to access only values then we will use object.value(obj)
+</script>
+--->
+
+<!---
+<script>                //copying the obj
+    let obj1 = {
+        "key1" : "Hi",          //if we done changes in orginal obj those changes are not applicable to copy obj
+    }
+
+    let obj2 = {...obj1};               //" ... " we can call spared operator a
+
+    obj1.key1 = "Original Copy";
+    obj2.key1 = "Xerox Copy";
+
+    console.log(obj1);
+    console.log(obj2)
+</script>
+--->
+
+<!----
+<script>
+    let obj = {
+        "key1" : "Hi",
+        "key2" : "Hello",
+        "key3" :"Welcome"
+    }
+    console.log(obj);               //{key1: 'Hi', key2: 'Hello', key3: 'Welcome'}
+    delete obj.key3;                // If you want to delete any key then we go for delete key word
+    console.log(obj)                //{key1: 'Hi', key2: 'Hello'}
+</script>
+--->
+
+<!---
+<script>
+    let obj1 = {"key1" : "Hi"};
+    let obj2 = {"key2" : "Hello"};
+    let obj3 = {"key3" :"Welcome"};
+    let obj4 = {...obj1,...obj2,...obj3}                //with the help of spared operator we can done concatenation
+
+    console.log(obj4)                                   //{key1: 'Hi', key2: 'Hello', key3: 'Welcome'}
+</script>
+--->
+
+<!---
+<script>
+    let obj1 = {};                          //Below are the applying to empty obj
+    obj1.key1 = "Hi";
+    obj1.key2 = "Hello";
+    obj1.key3 = "Welcome";
+    console.log(obj1);                      //{key1: 'Hi', key2: 'Hello', key3: 'Welcome'}
+</script>
+--->
+<!---
+<script>                //Over Ridding concept
+    let obj = {
+        "key1" : "a",
+        "key2" : "b",
+        "key3" : "c"            // if we don't over ride then we will get {key1: 'a', key2: 'b', key3: 'c'}
+    }
+    obj.key1 = "Hi";            //here we are over riding the a with Hi 
+    obj.key2 = "Hello";
+    obj.key3 = "Welcome";
+
+    console.log(obj)                //{key1: 'Hi', key2: 'Hello', key3: 'Welcome'}
+</script>
+--->
+<!----
+<script>                //Freeze operator
+    let obj = {
+        "key1" : "Hello",
+        "key2" : "A",
+        "key3" : "B",
+    }
+    Object.freeze(obj);                 //With the help of freeze operator we can lock the data
+
+    //read operator
+    console.log(obj);                       //{key1: 'Hello', key2: 'A', key3: 'B'}
+
+    //add operator
+    obj.key4 = "C";                         //{key1: 'Hello', key2: 'A', key3: 'B'}
+    console.log(obj);                   //object is locked
+
+    //update 
+    obj.key1 = "Hi";                    // Here update also not happen because object is locked
+    console.log(obj);                   //{key1: 'Hello', key2: 'A', key3: 'B'}
+</script>
+--->
+
+<!----
+<script>
+    let obj = {
+        "key1" : "a",
+        "key2" : "b",
+        "key3" : "c"
+    }
+    Object.seal(obj);
+
+    //read
+    console.log(obj);                       //{key1: 'a', key2: 'b', key3: 'c'}
+
+    //add
+    obj.key4 = "d";
+    console.log(obj);
+
+    //update
+    obj.key1 = "Welcome";
+    console.log(obj);                   //{key1: 'Welcome', key2: 'b', key3: 'c'}
+
+    //delect
+    delete obj.key2;
+    console.log(obj);
+</script>
+-->
+
+<!---
+<script>                    //Additing property
+    let obj = {
+        "key1" : "Hello"
+    }
+    Object.defineProperty(obj,"key2",{value:"Hello1", writable:false});
+    console.log(obj);                            //{key1: 'Hello', key2: 'Hello1'}
+
+    obj.key2 = "Welcome";
+    console.log(obj);                               //{key1: 'Hello', key2: 'Hello1'}
+
+    delete obj.key1;
+    console.log(obj)                                //{key2: 'Hello1'}
+</script>
+--->
+
+<!---
+<script>                //With the help of defineproperty we can add only one obj at  a time
+    let obj = {"key1":"Hello"};
+
+    //add key2 -----  disable update & delete
+    //add key3 -----  enable update & delete
+
+    Object.defineProperty(obj,"key2",{value:"Hi", writable:false});
+    Object.defineProperty(obj,"key2",{value:"H", writable:ture});
+    console.log(obj);
+    
+    obj.key2 = "Welcome";
+    obj.key3 = "welcome";
+    console.log(obj);
+
+    delete obj.key2;
+    delete obj.key3;
+    console.log(obj);
+</script>
+-->
+
+<script>                ////With the help of defineproperties we can add more than one obj at  a time
+    let obj = {
+        "key1" : "Hi"
+    }
+    Object.defineProperties(obj, {"key2": {value:"Hello",writable:false}, "key3": {value:"Well",writable:false} });
+    console.log(obj)                        //{key1: 'Hi', key2: 'Hello', key3: 'Well'}
+
+    obj.key2 = "Welcome";
+    obj.key3 = "Welcome";
+    console.log(obj)
+</script>

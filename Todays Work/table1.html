@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+        <style>
+            table{
+                width: 100%;
+            }
+
+            table,th,td{
+                border: 1px solid gray;
+                border-collapse: collapse;
+            }
+
+            thead{
+                height: 30px;
+                vertical-align: bottom;
+                background: linear-gradient(45deg,red, white, lightgreen);
+                color:blue;
+                font-family:  Helvetica, sans-serif;
+            }
+
+            td{
+                height: 25px;
+                text-align: center;
+            }
+
+            tr:nth-child(even){
+                background-color: gray;
+                color: white;
+            }
+
+            tr:hover{
+                background-color: pink;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <table>
+
+
+            <thead>
+                <tr>
+                    <th>SNO</th>
+                    <th>Subject</th>
+                    <th>Code</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Angular12</td>
+                    <td>NG</td>
+                    <td>Google</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>ReactJS</td>
+                    <td>RJS</td>
+                    <td>Facebook</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>JavaScript</td>
+                    <td>JS</td>
+                    <td>Netscape</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>VueJS</td>
+                    <td>Vue</td>
+                    <td>Vue</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>NodeJS</td>
+                    <td>Node</td>
+                    <td>NodeJS</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

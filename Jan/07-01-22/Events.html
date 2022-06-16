@@ -1,0 +1,139 @@
+<!---
+Events are "things" that happen to HTML elements.
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+An HTML event can be something the browser does, or something a user does.
+Here are some examples of HTML events:
+    An HTML web page has finished loading
+    An HTML input field was changed
+    An HTML button was clicked
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+Event Bubbling & Event Capturing:
+*********************************
+        Event Bubbling: propagation of bottom to top we can call event bubbling 
+            ex:sub-child-> child -> parent
+        Event Capturing: propagation of top to bottom we can call event capturnig
+            ex: parent-> child -> sub-child
+
+--->
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Capturing</title>
+        <style>
+            .parent{
+                width: 500px;
+                height: 400px;
+                background-color: red;
+                color: white;
+            }
+            .child{
+                width: 400px;
+                height: 300px;
+                background-color: white;
+                color: blue;
+                margin-left: 50px;
+                margin-top: 25px;
+            }
+            .sub-child{
+                width: 300px;
+                height: 200px;
+                background-color: green;
+                color: wheat;
+                margin-left: 50px;
+                margin-top: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            parent
+            <div class="child">
+                child
+                <div class="sub-child">
+                    sub-child
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        //This concept we can call event bubbiling
+       document.querySelector(".sub-child").addEventListener("click",()=>{
+            console.log("sub-child");
+        });
+
+        document.querySelector(".child").addEventListener("click",()=>{
+            event.stopPropagation();        //with the help of this function we stop the parent propagaion
+            console.log("child");
+        });
+
+        document.querySelector(".parent").addEventListener("click",()=>{
+            console.log("parent");
+        })
+        
+
+        //Event capturing start here
+ /*
+        document.querySelector(".parent").addEventListener("click",()=>{
+            console.log("parent");
+        },ture);        //if we place boolean value that event we call event capture
+
+        document.querySelector(".child").addEventListener("click",()=>{
+            console.log("child");
+        },ture);
+
+        document.querySelector(".sub-child").addEventListener("click",()=>{
+            console.log("sub-child");
+        });
+*/
+    </script>
+
+    
+</html>
+
+
+<!---
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="k"></p>
+        <button onclick="displayDate()">Time</button>
+
+        <script>
+            function displayDate(){
+                document.getElementById("k").innerHTML=Date();
+            }
+        </script>
+    </body>
+</html>
+--->
+
+<!---
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="k"></p>
+        <button onclick="document.getElementById('k').innerHTML=Date()">Try it</button>
+        <button onclick="this.innerHTML=Date()">Time</button>
+    </body>
+</html>
+--->
+
+<!----
+In the example above first one, the JavaScript code changes the content of the element with id="demo".
+
+In the example above second one, the JavaScript code changes the content of the element by using (this.innerHTML)
+--->
+
+<!----
+
+-->

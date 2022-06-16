@@ -1,0 +1,241 @@
+<!----
+JavaScript Strings:
+******************
+    JavaScript strings are for storing and manipulating text.
+    A JavaScript string is zero or more characters written inside quotes.
+    We can use "double quotes" or 'single quotes'
+-->
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strimg</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+    <script>
+      /*  let answer1 = "Hello";
+        let answer2 = "Welcome to 'JavaScript'";
+        let answer3 = 'Welcome to "Albenus" '; 
+
+        document.getElementById("demo").innerHTML =answer1 + "<br>" + answer2 + "<br>" + answer3; */
+    </script>
+
+
+    <script>
+        let x = "qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasfghjklmncx";
+        document.getElementById("demo").innerHTML = x.length;           //48
+    </script>
+</body>
+</html>
+--->
+
+
+<!----
+    String Object:
+Normally, JavaScript strings are primitive values, created from literals
+The new keyword complicates the code and slows down execution speed.
+
+<script>
+    function class1(){
+        this.sub1 = "React Js";
+        this.sub2 = "Angular"
+    }
+    let obj = new class1();
+    console.log(
+        obj.sub1,
+        obj.sub2,
+    );
+</script>
+-->
+
+<!---
+<script>
+    function class1(){
+        this.sub1 = "React Js";
+        this.sub2 = "Angular"
+    }
+    let obj = new class1();
+    console.log( obj.sub1 == obj.sub2 );        //false
+</script>
+--->
+
+<!----
+Javascripts Metods
+******************
+    JavaScript contain below methods
+        slice(start, end)  it contain start point and ending point 
+        substring(start, end)
+        substr(start, length)
+        contact()// with the help of this one we can call the another function
+        replace()// we can replace the matter
+        lowercase()//we can change the uppercase
+        uppercase()//We can change the lowercase
+        trim()//with the help of trim() keyword we can remove the spacess
+        charAt(position)// here we can check the position of the latter
+        charCodeAt()//it will represent the unicode of the character ex:A unicode position is 65
+        split()//coverting string to arry
+     Slice():
+     *******
+           it contain start point and ending point 
+           In starting point if mention some value 0 to that value not consider and end if you menstion some value that value will be consider
+            ex: slice(7,13); here 7th position onwords to 12th position will be applied
+            here 1st position is 0
+            and 2nd position is 1
+            in above 13 is 12th position
+           If a parameter is negative, the position is counted from the end of the string.
+           It will accepts both negative and positive values 
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slice</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+        <script>
+            let str = "Apple, Banana, Kiwi";
+            document.getElementById("demo").innerHTML = str.slice(7,13); 
+        </script>
+
+    </body>
+</html>
+-->
+
+
+<!----
+Substring()
+*************
+    substring() is similar to slice().
+    The difference is that substring() cannot accept negative indexes.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slice</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+        <script>
+            let str = "Apple, Banana, Kiwi";
+            document.getElementById("demo").innerHTML = str.substring(7,13); 
+        </script>
+
+    </body>
+</html>
+-->
+
+<!---
+substr()
+********
+substr() is similar to slice().
+The difference is that the second parameter specifies the length of the extracted part.
+It will consider both (+ve) value & (-ve) value
+If you omit the second parameter, substr() will slice out the rest of the string.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slice</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+        <script>
+            /*let str = "Apple, Banana, Kiwi";
+            document.getElementById("demo").innerHTML = str.substr(7,6); //here 1position contain 6 char so we placed 6
+*/
+            let str = "Apple, Banana, Kiwi";
+            document.getElementById("demo").innerHTML = str.substr(7);// here after 0th position how many words are those all will be prinit because we can't specifiy the length
+
+        </script>
+
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Split</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+    <script>
+        let text = "a,b,c,d,e,f";
+        const myArray = text.split(",");
+        document.getElementById("demo").innerHTML = myArray[0];//a in 0 position if you place any other num if it contain the position will display other wise undefine we will get
+    </script>
+
+    </body>
+</html>
+-->
+
+
+<!----
+JavaScript Search Methods
+*************************
+    String indexOf()//it returns the position of the first occurrence of a specified text:
+    **************
+    Ex:
+        <!DOCTYPE html>
+<html>
+    <head>
+        <title>Split</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+        <script>
+            let str = "Please locate where 'locate' occurs!";
+            document.getElementById("demo").innerHTML = str.indexOf("locate");// located started 7
+        </script>
+
+    </body>
+</html>
+
+    String lastIndexOf()//it returns the position of the last occurrence of a specified text
+    *********************    
+    Ex:
+                <!DOCTYPE html>
+<html>
+    <head>
+        <title>Split</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+        <script>
+            let str = "Please locate where 'locate' occurs!";
+            document.getElementById("demo").innerHTML = str.lastIndexOf("locate");// located started 21
+        </script>
+
+    </body>
+</html>
+    String startsearch()//searches a string for a specified value and returns the position of the match
+    **********************
+    
+    Ex:
+    -->
+            <!DOCTYPE html>
+<html>
+    <head>
+        <title>Split</title>
+    </head>
+    <body>
+    <p id="demo"></p>
+
+        <script>
+            let str = "Please locate where 'locate' occurs!";
+            document.getElementById("demo").innerHTML = str.search("locate");// located started 7
+        </script>
+
+    </body>
+</html>
+
+

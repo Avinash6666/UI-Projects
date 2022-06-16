@@ -1,0 +1,102 @@
+<!---<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript object</title>
+    </head>
+    <body>
+        
+        <p id="demo"></p>
+        
+        <script>
+            // Create an object:
+            const person = {
+            firstName: "Aditya",
+            lastName: "Companey",
+            age: 50,
+            eyeColor: "blue"
+            };
+            
+            // Display some data from the object:
+            document.getElementById("demo").innerHTML =
+            person.firstName + " " + person.lastName + " is " + person.age + " years old.";
+        </script>
+        
+    </body>
+</html>
+--->
+<!----
+Accessing Object Properties
+***************************
+    we can access the obj propartices in two ways
+        1)ObjectName.propertyName 
+        2)ObjectName["propertyName"]
+    If you access a method without the () parentheses, it will return the function definition
+--->
+
+
+<script>
+    function myFun(){
+        return fun1();
+    }
+    function fun1(){
+        return "Hello";
+    }
+    console.log(myFun);     //ƒ myFun(){ return fun1(); }  (if you want solve the problem then we need to place paranthess)
+    console.log(myFun());      //Hello
+</script>
+
+<!----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript object</title>
+    </head>
+    <body>
+        
+        <p id="demo"></p>
+        
+            <script>
+                // Create an object:
+                const person = {
+                firstName: "John",
+                lastName : "Jhon",
+                };
+                
+                // Display some data from the object:
+                document.getElementById("demo").innerHTML =
+                person["firstName"] + " " + person["lastName"];
+            </script>
+    </body>
+</html>
+--->
+
+
+<!----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript object</title>
+    </head>
+    <body>
+        
+        <p id="demo"></p>
+        
+            <script>
+                // Create an object:
+                const person = {
+                firstName: "John",
+                lastName : "Jhon",
+                id     :  5566
+                };
+                
+                // Display some data from the object:
+                document.getElementById("demo").innerHTML =
+                person.firstName + " " + person.lastName;
+            </script>
+    </body>
+</html>
+ ---->           
+
+
+
+        
